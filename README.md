@@ -4,16 +4,6 @@ Course notes and exercises for learning machine learning with scikit-learn and P
 
 You will run this repository locally with VS Code, Python, and Jupyter notebooks.
 
-## Learning sequence
-
-Follow this path:
-
-1. `notebooks/feedforward/` - learn the training loop, loss functions, optimizers, train/test splits, metrics, and overfitting.
-2. `notebooks/cnn/` - learn why neural network structure matters, using convolutions, feature maps, filters, Grad-CAM, and misclassification analysis.
-3. `sandbox/heart/runner.ipynb` - apply the same workflow to a messier ECG project where preprocessing, class imbalance, and honest evaluation matter.
-
-The heart project is a capstone-style playground after you have worked through the feedforward and CNN notebooks. You should recognize the same rhythm: load data, preprocess, create batches, define a model, choose a loss and optimizer, train, plot curves, evaluate, and explain errors.
-
 ## Repository structure
 
 ```text
