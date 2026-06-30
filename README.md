@@ -2,16 +2,22 @@
 
 Course notes and exercises for learning machine learning with scikit-learn and PyTorch.
 
-This repository is designed to work well in Google Colab while still being easy to run locally with `pip`.
+You can use this repository in Google Colab or run it locally with `pip`.
+
+## Learning sequence
+
+Follow this path:
+
+1. `notebooks/feedforward/` - learn the training loop, loss functions, optimizers, train/test splits, metrics, and overfitting.
+2. `notebooks/cnn/` - learn why neural network structure matters, using convolutions, feature maps, filters, Grad-CAM, and misclassification analysis.
+3. `sandbox/heart/runner.ipynb` - apply the same workflow to a messier ECG project where preprocessing, class imbalance, and honest evaluation matter.
+
+The heart project is a capstone-style playground after you have worked through the feedforward and CNN notebooks. You should recognize the same rhythm: load data, preprocess, create batches, define a model, choose a loss and optimizer, train, plot curves, evaluate, and explain errors.
 
 ## Repository structure
 
 ```text
 .
-├── modules/
-│   ├── feedforward/
-│   ├── cnn/
-│   └── rnn/
 ├── notebooks/
 │   ├── feedforward/
 │   │   ├── 01_mnist_feedforward_quickstart.ipynb
@@ -24,12 +30,15 @@ This repository is designed to work well in Google Colab while still being easy 
 │   └── sklearn/
 │       └── 01_sklearn_quickstart.ipynb
 ├── sandbox/
-│   └── README.md
+│   ├── README.md
+│   └── heart/
+│       ├── runner.ipynb
+│       └── setup.py
 ├── requirements.txt
 └── README.md
 ```
 
-## Student setup
+## Setup
 
 ### Google Colab
 
@@ -69,24 +78,18 @@ Start Jupyter:
 jupyter notebook
 ```
 
-## Modules
-
-- `modules/feedforward/` - dense neural networks, MNIST baselines, training curves, and loss landscape slices.
-- `modules/cnn/` - convolutional neural networks for image and spatial data.
-- `modules/rnn/` - recurrent neural networks for sequence data.
-
 ## Notebooks
 
-- `notebooks/feedforward/` - runnable MNIST feedforward neural network notebooks.
-- `notebooks/cnn/` - runnable CNN notebooks.
+- `notebooks/feedforward/` - runnable MNIST notebooks for dense neural networks and the foundations of training.
+- `notebooks/cnn/` - runnable CNN notebooks for convolutional models and visual interpretation.
 - `notebooks/rnn/` - runnable RNN notebooks.
 - `notebooks/sklearn/` - classical machine learning baselines.
 
 ## Sandbox
 
-Use `sandbox/` for scratch notebooks, experiments, temporary datasets, and local project work.
+Use `sandbox/` for scratch notebooks, experiments, temporary datasets, and local project work. The heart ECG project lives here as your guided project starter.
 
-The contents of `sandbox/` are ignored by git, except for `sandbox/README.md`.
+Most contents of `sandbox/` are ignored by git. Project starter files such as `sandbox/**/setup.py` and `sandbox/**/runner.ipynb` may be tracked.
 
 ## Git hygiene
 

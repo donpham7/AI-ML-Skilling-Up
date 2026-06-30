@@ -15,6 +15,17 @@ Dataset files under `sandbox/**/data/` are ignored.
 
 The heart project uses the MIT-BIH Arrhythmia ECG dataset from PhysioNet.
 
+This project is meant to come after the feedforward and CNN notebooks. It gives you a more realistic signal-classification problem where the familiar training workflow still applies, but the choices are less automatic.
+
+Use it to practice:
+
+- choosing preprocessing for noisy real-world signals
+- designing a model for `(batch, channels, samples)` ECG windows
+- choosing a loss function and optimizer
+- reading train/test curves
+- interpreting accuracy, balanced accuracy, precision, recall, F1, and the confusion matrix
+- noticing class imbalance and possible data leakage
+
 ### 1. Install dependencies
 
 From the repository root:
@@ -62,13 +73,13 @@ The notebook provides:
 - ECG record loading
 - an empty preprocessing function for you to fill in
 - ECG window creation
-- train/test dataloaders
+- inter-patient train/test dataloaders
 - TODO sections for model, loss function, and optimizer
 - training curves and evaluation metrics
 
 ### 4. What you should edit
 
-You should focus on:
+Focus on:
 
 - `preprocess_record(record)`
 - `HeartECGModel`
@@ -76,7 +87,29 @@ You should focus on:
 - `optimizer`
 - training settings such as epochs, batch size, and learning rate
 
-### 5. Git behavior
+### 5. Suggested workflow
+
+Change one thing at a time:
+
+1. Start with a simple preprocessing choice, such as selecting one lead and normalizing each record.
+2. Build a small model that produces two logits: `normal` and `abnormal`.
+3. Choose `nn.CrossEntropyLoss()` and an optimizer such as Adam.
+4. Train for a few epochs.
+5. Compare train and test curves.
+6. Read the confusion matrix and class-level precision/recall.
+7. Decide what to try next.
+
+Good experiments include:
+
+- changing the preprocessing
+- trying a feedforward model versus a 1D CNN
+- changing the number of convolution channels
+- using class-weighted loss
+- changing learning rate or epochs
+
+The goal is not only to get a high score. The goal is to explain why the score changed.
+
+### 6. Git behavior
 
 The dataset is intentionally ignored:
 
