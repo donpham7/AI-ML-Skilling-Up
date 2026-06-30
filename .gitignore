@@ -218,9 +218,11 @@ __marimo__/
 .streamlit/secrets.toml
 
 # Local scratch work
-sandbox/*
+sandbox/**
 !sandbox/
 !sandbox/README.md
+!sandbox/**/
+!sandbox/**/runner.py
 
 # Course-generated artifacts
 data/

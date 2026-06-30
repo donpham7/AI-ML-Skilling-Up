@@ -14,7 +14,11 @@ This repository is designed to work well in Google Colab while still being easy 
 │   └── rnn/
 ├── notebooks/
 │   ├── feedforward/
-│   │   └── 01_feedforward_quickstart.ipynb
+│   │   ├── 01_mnist_feedforward_quickstart.ipynb
+│   │   ├── 02_training_curves.ipynb
+│   │   ├── 03_weights_and_activations.ipynb
+│   │   ├── 04_loss_landscape.ipynb
+│   │   └── 05_3d_loss_landscape.ipynb
 │   ├── cnn/
 │   ├── rnn/
 │   └── sklearn/
@@ -67,13 +71,13 @@ jupyter notebook
 
 ## Modules
 
-- `modules/feedforward/` - dense neural networks and standard supervised learning workflows.
+- `modules/feedforward/` - dense neural networks, MNIST baselines, training curves, and loss landscape slices.
 - `modules/cnn/` - convolutional neural networks for image and spatial data.
 - `modules/rnn/` - recurrent neural networks for sequence data.
 
 ## Notebooks
 
-- `notebooks/feedforward/` - runnable feedforward neural network notebooks.
+- `notebooks/feedforward/` - runnable MNIST feedforward neural network notebooks.
 - `notebooks/cnn/` - runnable CNN notebooks.
 - `notebooks/rnn/` - runnable RNN notebooks.
 - `notebooks/sklearn/` - classical machine learning baselines.
