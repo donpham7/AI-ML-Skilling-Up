@@ -216,3 +216,18 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# Local scratch work
+sandbox/*
+!sandbox/
+!sandbox/README.md
+
+# Course-generated artifacts
+data/
+datasets/
+models/
+checkpoints/
+outputs/
+*.pt
+*.pth
+*.ckpt
