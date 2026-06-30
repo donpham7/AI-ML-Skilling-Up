@@ -222,7 +222,8 @@ sandbox/**
 !sandbox/
 !sandbox/README.md
 !sandbox/**/
-!sandbox/**/runner.py
+!sandbox/**/runner.ipynb
+!sandbox/**/setup.py
 
 # Course-generated artifacts
 data/
