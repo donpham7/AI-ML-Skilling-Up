@@ -11,6 +11,40 @@ Tracked project starter files are allowed:
 
 Dataset files under `sandbox/**/data/` are ignored.
 
+## CIFAR-10 Project
+
+The CIFAR-10 project uses the CIFAR-10 image dataset through `torchvision`.
+
+This project is meant to come after the CNN notebooks. It gives you a familiar image-classification problem where you can make more of the modeling decisions yourself.
+
+You do not need a `setup.py` file for this project. The runner notebook downloads CIFAR-10 automatically into:
+
+```text
+sandbox/cifar10/data/
+```
+
+Open:
+
+```text
+sandbox/cifar10/runner.ipynb
+```
+
+Use it to practice:
+
+- choosing image transforms and augmentation
+- designing a CNN for `(batch, 3, 32, 32)` images
+- choosing a loss function and optimizer
+- reading train/test curves
+- interpreting class-level metrics and the confusion matrix
+
+Focus on:
+
+- `train_transform` and `test_transform`
+- `CIFAR10Model`
+- `loss_fn`
+- `optimizer`
+- training settings such as subset size, batch size, epochs, and learning rate
+
 ## Heart ECG Project
 
 The heart project uses the MIT-BIH Arrhythmia ECG dataset from PhysioNet.

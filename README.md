@@ -21,6 +21,8 @@ You will run this repository locally with VS Code, Python, and Jupyter notebooks
 │       └── 01_sklearn_quickstart.ipynb
 ├── sandbox/
 │   ├── README.md
+│   ├── cifar10/
+│   │   └── runner.ipynb
 │   └── heart/
 │       ├── runner.ipynb
 │       └── setup.py
@@ -91,7 +93,17 @@ git clone https://github.com/donpham7/AI-ML-Skilling-Up.git
 cd AI-ML-Skilling-Up
 ```
 
-### 6. Create a Python environment
+### 6. Pull the latest updates
+
+After you have already downloaded the repository once, you do not need to clone it again. To get the newest notebooks and instructions, open a terminal inside the `AI-ML-Skilling-Up` folder and run:
+
+```bash
+git pull
+```
+
+Run `git pull` before each class or whenever you are told the course files changed.
+
+### 7. Create a Python environment
 
 On macOS or Linux, copy and paste:
 
@@ -119,7 +131,7 @@ Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
 
 After activation, your terminal prompt should show `.venv` somewhere. That means your project environment is active.
 
-### 7. Open the project in VS Code
+### 8. Open the project in VS Code
 
 From inside the `AI-ML-Skilling-Up` folder, copy and paste:
 
@@ -133,7 +145,7 @@ If `code .` does not work, open VS Code manually and choose:
 File -> Open Folder -> AI-ML-Skilling-Up
 ```
 
-### 8. Select the notebook kernel
+### 9. Select the notebook kernel
 
 Start with:
 
@@ -150,7 +162,7 @@ If VS Code does not ask automatically:
 3. Choose the `.venv` Python environment.
 4. Run the first cell.
 
-### 9. Test one notebook
+### 10. Test one notebook
 
 Open this notebook:
 
@@ -185,7 +197,7 @@ pip install -r requirements.txt
 
 ## Sandbox
 
-Use `sandbox/` for scratch notebooks, experiments, temporary datasets, and local project work. The heart ECG project lives here as your guided project starter.
+Use `sandbox/` for scratch notebooks, experiments, temporary datasets, and local project work. The CIFAR-10 and heart ECG projects live here as guided project starters.
 
 Most contents of `sandbox/` are ignored by git. Project starter files such as `sandbox/**/setup.py` and `sandbox/**/runner.ipynb` may be tracked.
 
